@@ -270,25 +270,6 @@ textarea {
   font-size: 15px;
 }
 
-.lang {
-  display: flex;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.lang__item {
-  padding: 4px 12px;
-  text-decoration: none;
-}
-
-.lang__item.is-current {
-  background: var(--main);
-  color: var(--white);
-}
-
 .menu-btn {
   display: none;
   position: relative;
@@ -498,8 +479,8 @@ textarea {
     display: none;
   }
 
-  .gnav__sub {
-    justify-content: space-between;
+  .gnav__cta {
+    width: 100%;
   }
 
   .hero__body {
@@ -1367,6 +1348,15 @@ textarea {
 .form__submit {
   width: 100%;
   margin-top: 8px;
+}
+
+.form__status {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--main-thin);
+  color: var(--main-dark);
+  font-size: 14px;
 }
 
 .footer {
