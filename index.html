@@ -14,7 +14,85 @@
 </head>
 <body>
 
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#top">
+      <img src="images/logo.png" alt="Marsiees" width="120" height="76">
+    </a>
+    <nav class="gnav" id="gnav" aria-label="Main">
+      <ul class="gnav__list">
+        <li><a href="#challenges">Why Japan</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="gnav__sub">
+        <div class="lang">
+          <a class="lang__item" href="https://marsiees.com/" hreflang="ja" lang="ja">JP</a>
+          <span class="lang__item is-current" aria-current="true">EN</span>
+        </div>
+        <a class="btn btn--primary gnav__cta" href="#contact">Contact us</a>
+      </div>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="gnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
 <main id="top">
+
+  <section class="hero" aria-label="Introduction">
+    <div class="hero__slides" aria-hidden="true">
+      <picture class="hero__slide is-active">
+        <source media="(max-width: 768px)" srcset="images/hero-01-sp.webp">
+        <img src="images/hero-01.webp" alt="" width="1920" height="844" fetchpriority="high">
+      </picture>
+      <picture class="hero__slide">
+        <source media="(max-width: 768px)" srcset="images/hero-02-sp.webp">
+        <img src="images/hero-02.webp" alt="" width="1920" height="844" loading="lazy">
+      </picture>
+      <picture class="hero__slide">
+        <source media="(max-width: 768px)" srcset="images/hero-03-sp.webp">
+        <img src="images/hero-03.webp" alt="" width="1920" height="844" loading="lazy">
+      </picture>
+    </div>
+
+    <div class="hero__body inner">
+      <div class="hero__box">
+        <p class="hero__eyebrow">B2B sales outsourcing for companies entering Japan</p>
+        <h1 class="hero__title">Your sales team in Japan, <span>without hiring one.</span></h1>
+        <p class="hero__copy">Test marketing, trade show follow-up, telemarketing and inside sales &mdash; run by a female-led team of B2B sales professionals who know how Japanese buyers make decisions.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Get a free quote</a>
+          <a class="btn btn--ghost" href="#services">See how it works</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__stats inner">
+      <ul class="stats">
+        <li class="stats__item">
+          <strong>2.16<small>%</small></strong>
+          <span>Outbound appointment rate<br>for KOKUYO &amp; PARTNERS</span>
+        </li>
+        <li class="stats__item">
+          <strong>5<small>days</small></strong>
+          <span>Business days to launch<br>at the earliest</span>
+        </li>
+        <li class="stats__item">
+          <strong>1<small>month</small></strong>
+          <span>Trial contract<br>available</span>
+        </li>
+        <li class="stats__item">
+          <strong>6<small>yrs+</small></strong>
+          <span>Sales experience<br>per team member</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <script src="js/main.js" defer></script>
