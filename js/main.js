@@ -108,6 +108,13 @@
       if (firstInvalid) {
         e.preventDefault();
         firstInvalid.focus();
+        return;
+      }
+      if (!form.getAttribute('action')) {
+        e.preventDefault();
+        var status = document.getElementById('formStatus');
+        status.textContent = 'This is a preview. The form will be connected when the page goes live, so this message was not sent.';
+        status.hidden = false;
       }
     });
   }
