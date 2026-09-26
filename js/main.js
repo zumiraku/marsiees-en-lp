@@ -42,4 +42,20 @@
       slides[current].classList.add('is-active');
     }, 6000);
   }
+
+  var videoWrap = document.getElementById('video');
+  if (videoWrap) {
+    var video = videoWrap.querySelector('video');
+    videoWrap.querySelector('.video__play').addEventListener('click', function () {
+      video.controls = true;
+      var p = video.play();
+      if (p && p.then) {
+        p.then(function () {
+          videoWrap.classList.add('is-playing');
+        }).catch(function () {
+          video.controls = false;
+        });
+      }
+    });
+  }
 })();
