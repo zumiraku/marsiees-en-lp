@@ -5,8 +5,11 @@
   var menuBtn = document.getElementById('menuBtn');
   var gnav = document.getElementById('gnav');
 
+  var pagetop = document.querySelector('.pagetop');
+
   function onScroll() {
     header.classList.toggle('is-scrolled', window.scrollY > 10);
+    if (pagetop) pagetop.classList.toggle('is-show', window.scrollY > 600);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -55,6 +58,56 @@
         }).catch(function () {
           video.controls = false;
         });
+      }
+    });
+  }
+
+  var form = document.getElementById('contactForm');
+  if (form) {
+    var messages = {
+      valueMissing: 'Please fill in this field.',
+      typeMismatch: 'Please enter a valid email address.',
+      agree: 'Please agree to the privacy policy.'
+    };
+
+    function showError(input) {
+      var field = input.closest('.field');
+      var error = field.querySelector('.field__error');
+      var valid = input.checkValidity();
+      field.classList.toggle('is-error', !valid);
+      input.setAttribute('aria-invalid', String(!valid));
+      if (valid) {
+        if (error) error.remove();
+        return true;
+      }
+      if (!error) {
+        error = document.createElement('p');
+        error.className = 'field__error';
+        error.id = input.name + '-error';
+        input.setAttribute('aria-describedby', error.id);
+        field.appendChild(error);
+      }
+      if (input.type === 'checkbox') error.textContent = messages.agree;
+      else if (input.validity.typeMismatch) error.textContent = messages.typeMismatch;
+      else error.textContent = messages.valueMissing;
+      return false;
+    }
+
+    var inputs = form.querySelectorAll('[required]');
+    Array.prototype.forEach.call(inputs, function (input) {
+      input.addEventListener(input.type === 'checkbox' ? 'change' : 'blur', function () {
+        showError(input);
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      var firstInvalid = null;
+      Array.prototype.forEach.call(inputs, function (input) {
+        if (!showError(input) && !firstInvalid) firstInvalid = input;
+      });
+      if (firstInvalid) {
+        e.preventDefault();
+        firstInvalid.focus();
       }
     });
   }
