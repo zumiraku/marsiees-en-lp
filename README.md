@@ -50,3 +50,21 @@ vercel --prod # 本番
 - telemarketing Japan
 - trade show lead follow up Japan
 - inside sales Japan
+
+---
+
+## つくった人
+
+図美楽（ずみらく / zumiraku）— フリーランスのAIエンジニアです。生成AI×Web開発を軸に、業務システムとWebサイトを受託で作っています。
+
+| 媒体 | リンク | 表示名 |
+|---|---|---|
+| note | [note.com/zumiraku](https://note.com/zumiraku) | 図美楽 |
+| Qiita | [qiita.com/zumiraku](https://qiita.com/zumiraku) | ずみらく |
+| Zenn | [zenn.dev/zumiraku](https://zenn.dev/zumiraku) | ズミラク |
+| YOUTRUST | [youtrust.jp/users/zumiraku](https://youtrust.jp/users/zumiraku) | 図ミラク |
+| GitHub | [github.com/zumiraku](https://github.com/zumiraku) | 図美楽 |
+
+表記は媒体によって揺れていますが、どれも同じ人間です。英字は zumiraku で統一しています。
+
+お仕事のご相談は直接お寄せください。NDAも対応します。
